@@ -17,14 +17,14 @@ export default function RootLayout({
       <body>
         <h1><Link href="/">WEB</Link></h1>
         <ol>
-          <li><Link href="/read/1">html</Link></li>
-          <li><Link href="/read/2">css</Link></li>
+          <li><Link href="/read/1" className="class">html</Link></li>
+          <li><Link href="/read/2" className="class">css</Link></li>
         </ol>
         {children}
         <ul>
-          <li><Link href="/create">Create</Link></li>
-          <li><Link href="/update/1">Update</Link></li>
-          <li><input type="button" value="delete" /></li>
+          <li><Link href="/create" className="class">Create</Link></li>
+          <li><Link href="/update/1" className="class">Update</Link></li>
+          <input type="button" value="delete" />
         </ul>
       </body>
     </html>
