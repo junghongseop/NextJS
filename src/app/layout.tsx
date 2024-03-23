@@ -23,8 +23,10 @@ export default async function RootLayout({
   //       setTopics(result);
   //     });
   // }, []);
-  
-  const res = await fetch('http://localhost:9999/topics');
+
+  const res = await fetch("http://localhost:9999/topics", {
+    cache: 'no-store',
+  }); // fetch 명령어만 사용하면 한번 가져온 정보를 저장함
   const topics = await res.json();
   return (
     <html>

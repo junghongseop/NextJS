@@ -1,5 +1,6 @@
 "use client";
 
+import { AnyMxRecord } from "dns";
 import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 
@@ -13,8 +14,8 @@ export default function Create() {
         // const body = event.target.body.value;
 
         const formData = new FormData(event.currentTarget);
-        const title = formData.get('title') as String;
-        const body = formData.get('body') as String;
+        const title = formData.get("title") as String;
+        const body = formData.get("body") as String;
         const option = {
           method: "POST",
           headers: {
@@ -28,6 +29,7 @@ export default function Create() {
             console.log(result);
             const lastId = result.id;
             router.push(`/read/${lastId}`);
+            router.refresh();
           });
       }}
     >
