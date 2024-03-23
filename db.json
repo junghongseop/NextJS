@@ -24,6 +24,11 @@
       "title": "java",
       "body": "java is...",
       "id": 5
+    },
+    {
+      "title": "flutter",
+      "body": "flutter is...",
+      "id": 6
     }
   ],
   "posts": [
