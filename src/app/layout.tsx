@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 //import { useEffect, useState } from "react";
+import { Control } from "./Control";
 
 // metadata는 서버 컴포넌트에서만 사용가능
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default async function RootLayout({
   // }, []);
 
   const res = await fetch("http://localhost:9999/topics", {
-    cache: 'no-store',
+    cache: "no-store",
   }); // fetch 명령어만 사용하면 한번 가져온 정보를 저장함
   const topics = await res.json();
   return (
@@ -44,19 +45,7 @@ export default async function RootLayout({
           })}
         </ol>
         {children}
-        <ul>
-          <li>
-            <Link href="/create" className="class">
-              Create
-            </Link>
-          </li>
-          <li>
-            <Link href="/update/1" className="class">
-              Update
-            </Link>
-          </li>
-          <input type="button" value="delete" />
-        </ul>
+        <Control />
       </body>
     </html>
   );
