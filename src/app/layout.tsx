@@ -25,7 +25,7 @@ export default async function RootLayout({
   //     });
   // }, []);
 
-  const res = await fetch("http://localhost:9999/topics", {
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "topics", {
     cache: "no-store",
   }); // fetch 명령어만 사용하면 한번 가져온 정보를 저장함
   const topics = await res.json();
