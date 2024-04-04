@@ -4,6 +4,7 @@ import Link from "next/link";
 import "./globals.css";
 //import { useEffect, useState } from "react";
 import { Control } from "./Control";
+import React from "react";
 
 // metadata는 서버 컴포넌트에서만 사용가능
 export const metadata: Metadata = {

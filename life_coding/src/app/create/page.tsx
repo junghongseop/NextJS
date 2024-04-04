@@ -2,7 +2,7 @@
 
 import { AnyMxRecord } from "dns";
 import { useRouter } from "next/navigation";
-import { FormEvent } from "react";
+import React, { FormEvent } from "react";
 
 export default function Create() {
   const router = useRouter();

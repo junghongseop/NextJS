@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
+import React from "react";
 
 export function Control() {
   const params = useParams();
