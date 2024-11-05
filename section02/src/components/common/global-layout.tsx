@@ -1,15 +1,14 @@
-import Link from "next/link";
 import { ReactNode } from "react";
 import styled from "styled-components";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 
 const GlobalLayout = ({ children }: { children: ReactNode }) => {
   return (
     <Container>
-      <Header>
-        <StyledLink href="/">📚 ONEBITE BOOKS</StyledLink>
-      </Header>
+      <Header />
       <Main>{children}</Main>
-      <Footer>제작 @wjdghdtjq</Footer>
+      <Footer />
     </Container>
   );
 };
@@ -26,24 +25,6 @@ const Container = styled.div`
   padding: 0px 15px;
 `;
 
-const Header = styled.header`
-  height: 60px;
-
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 60px;
-`;
-
-const StyledLink = styled(Link)`
-  color: black;
-  text-decoration: none;
-`;
-
 const Main = styled.main`
   padding: 10px;
 `;
-
-const Footer = styled.footer`
-    padding: 100px 0px;
-    color: gray;
-`
