@@ -1,8 +1,9 @@
 import SearchLayout from "@/components/layouts/search-layout";
 import { ReactNode } from "react";
+import BookList from "@/components/main/BookList/BookList";
 
 export default function Home() {
-  return <h1>index</h1>;
+  return <BookList />;
 }
 
 // JS의 모든 함수는 객체임
