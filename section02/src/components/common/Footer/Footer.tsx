@@ -7,6 +7,6 @@ const Footer = () => {
 export default Footer;
 
 const StyledFooter = styled.footer`
-  padding: 100px 0px;
+  padding: 100px 20px;
   color: gray;
 `;
