@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import Header from "../common/Header/Header";
+import Footer from "../common/Footer/Footer";
 
 const GlobalLayout = ({ children }: { children: ReactNode }) => {
   return (
