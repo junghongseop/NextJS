@@ -1,12 +1,18 @@
 import styled from "styled-components";
 import AllList from "./AllList/AllList";
 import RecommandList from "./RecommandList/RecommandList";
+import { BookData } from "@/types/main/type";
 
-const BookList = () => {
+interface BookListProps {
+  allbook: BookData[];
+  recommandbook: BookData[];
+}
+
+const BookList = ({ allbook, recommandbook }: BookListProps) => {
   return (
     <Container>
-      <AllList />
-      <RecommandList />
+      <AllList allbooks={allbook} />
+      <RecommandList recommandbooks={recommandbook} />
     </Container>
   );
 };

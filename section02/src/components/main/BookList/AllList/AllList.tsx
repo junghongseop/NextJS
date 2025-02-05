@@ -1,12 +1,12 @@
+import { BookData } from "@/types/main/type";
 import Title from "../../Title/Title";
-import books from "@/mocks/books.json";
 import ListItem from "../ListItem/ListItem";
 
-const AllList = () => {
+const AllList = ({ allbooks }: { allbooks: BookData[] }) => {
   return (
     <section>
       <Title>등록된 모든 도서</Title>
-      {books.map((books) => (
+      {allbooks.map((books) => (
         <ListItem key={books.id} {...books} />
       ))}
     </section>
